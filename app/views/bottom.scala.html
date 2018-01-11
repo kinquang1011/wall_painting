@@ -1,0 +1,78 @@
+@(slogan: Boolean, gmap: Boolean)
+@if(slogan) {
+    <div class="wrapper bgded overlay" style="background-image: url(@routes.Assets.versioned("images/demo/backgrounds/02.png")">
+        <div class="hoc container clear">
+                <!-- ################################################################################################ -->
+            <div class="testimonial clear">
+                <blockquote>
+                    Chúng tôi là những người đam mê sáng tạo nghệ thuật muốn tô thêm cho cuộc sống xung quanh ta sinh động và sôi nổi hơn, mang tinh hoa đất trời vào không gian của bạn
+                </blockquote>
+                <figure>
+                    <img class="circle" src="@routes.Assets.versioned("/images/demo/60x60.png")" alt="">
+                    <figcaption>
+                        <strong>Như Kốm</strong>
+                        <br>
+                        needShow            <em>Job / Title</em>
+                    </figcaption>
+                </figure>
+            </div>
+                <!-- ################################################################################################ -->
+        </div>
+    </div>
+}
+@if(gmap) {
+    <div class="wrapper">
+        <section class="hoc center clear">
+                <!-- ################################################################################################ -->
+            @*<p class="font-xs"><a href="#">Sollicitudin neque mauris ut</a></p>*@
+            <h3 class="btmspace-10">Tìm chúng tôi tại đây</h3>
+            @*<p class="nospace">Sed at augue consectetur ultricies elit semper facilisis quam aliquam</p>*@
+                <!-- ################################################################################################ -->
+        </section>
+        <div class="gmap clear">
+                <!-- ################################################################################################ -->
+            <div id="gmapcanvas"><!-- Leave Empty --></div>
+                <!-- ################################################################################################ -->
+        </div>
+    </div>
+}
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+<div class="wrapper row4">
+    <footer id="footer" class="hoc clear">
+            <!-- ################################################################################################ -->
+        <div class="two_quarter first">
+            <h4 class="title">Liên Hệ</h4>
+
+            <address class="btmspace-30" style="font-size: 16px;
+                color: #eeeeee;">
+                Địa chỉ: 141 Tôn Thât Thuyết, Quận 4, Thành phố Hồ Chí Minh
+            </address>
+
+            <ul class="nospace">
+                <li class="btmspace-10" style="font-size: 30px;
+                    color: #eeeeee;"><i class="fa fa-phone"></i> 01283742926</li>
+            </ul>
+        </div>
+        <div class="two_quarter">
+            <h6 class="title">Dịch vụ</h6>
+            <article>
+            </article>
+        </div>
+    </footer>
+</div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+<div class="wrapper row5">
+    <div id="copyright" class="hoc clear">
+            <!-- ################################################################################################ -->
+        <p class="fl_left" >Copyright &copy; 2017 - Nhukomtranhtuong - <a href="#">Nhu kom</a></p>
+            <!-- ################################################################################################ -->
+    </div>
+</div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>

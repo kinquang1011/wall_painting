@@ -1,0 +1,55 @@
+@import scala.concurrent.Future
+@import scala.concurrent.ExecutionContext.Implicits.global
+@import services.Util
+@import models._
+@(lstMenu: Seq[Menu])
+<header id="header" class="hoc clear">
+        <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+        <h1><a href="#">NhuKomTranhTuong</a></h1>
+    </div>
+    <nav id="mainav" class="fl_right">
+        <ul class="clear">
+            @for(menuId <- lstMenu) {
+                <li id="limenu_@menuId.id">
+                    <a href="/@Util.removeAccent(menuId.name)" >@menuId.name</a>
+
+                </li>
+            }
+        </ul>
+    </nav>
+        <!-- ################################################################################################ -->
+    <script type="text/javascript">
+            $(document).ready(function () {
+                $("li").one('mouseenter', function () {
+                    getSubMenu(this.id)
+                });
+            });
+            $(document).ready(function () {
+                $("li").hover(function () {
+                    $(this).css("background-color", "rgba(0, 0, 0, .6)");
+                }, function () {
+                    $(this).css("background-color", "");
+                });
+            });
+
+            function getSubMenu(idLiTag) {
+                var subMenu = idLiTag.substring(idLiTag.length - 1, idLiTag.length)
+                /*   alert(subMenu)*/
+                $.ajax({
+                    url: "/callSubmenu/" + subMenu,
+                    type: 'GET',
+                    contentType: 'application/json',
+                    dataType: "html",
+
+                    success: function (result, status) {
+                        $('#' + idLiTag).append(result);
+                    },
+                    error: function (data, status) {
+                        console.log(data);
+                    }
+                });
+            }
+    </script>
+</header>
+

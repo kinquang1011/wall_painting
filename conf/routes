@@ -1,0 +1,27 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /                           controllers.HomeController.index
+GET         /trangchu                   controllers.HomeController.index
+GET         /group/quancafe/            controllers.HomeController.getContentSub()
+GET         /group/nhao/                controllers.HomeController.getContentSub()
+GET         /group/truongmanmon/        controllers.HomeController.getContentSub()
+GET         /group/trasua/              controllers.HomeController.getContentSub()
+GET         /group/tranhtet/            controllers.HomeController.getContentSub()
+GET         /group/tranhbo/             controllers.HomeController.getContentSub()
+
+#GET        /favicon.ico                controllers.Default.notFound
+#GET        /:menuId                    controllers.HomeController.index2(menuId: Int)
+GET         /callSubmenu/:menuId        controllers.HomeController.getSubsMenuByMenuId(menuId: Int)
+GET         /admin                      controllers.AdminController.index
+GET         /admin/logout                      controllers.AdminController.logout
+POST        /admin/login                controllers.AdminController.login
+#GET         /                    controllers.ApplicationController.index
+#POST        /add                 controllers.ApplicationController.addUser
+#GET         /delete/:id          controllers.ApplicationController.deleteUser(id : Long)
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+

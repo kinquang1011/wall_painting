@@ -1,0 +1,20 @@
+@import services.Util
+@(lstSubMenu: Seq[Sub_Menu], menuName: String)
+<div class="row">
+    <h4 class="block-title">
+        <a href="http://vetranhtuonghcm.vn/du-an" class="td-pulldown-size">@menuName</a>
+    </h4>
+    @for(sub <- lstSubMenu) {
+
+        <div class="col-md-4 col-lg-4 col-xs-12 td-module-thumb td_module_mx1">
+            <a href="@Util.removeAccent(sub.subName)" title="@sub.subName">
+                <img class="entry-thumb td-animation-stack-type0-1" src="http://afamilycdn.com/zoom/700_438/KElWBST9pq9ycRpaxxO7GskRMpro08/Image/2012/08/tranhtuong-ava-33269.jpg" alt="" title="@sub.subName">
+            </a>
+            <div class="td-module-meta-info">
+                <h3 id="h5" class="entry-title td-module-title"><a href="/group/@Util.removeAccent(sub.subName)/" rel="bookmark" title="@sub.subName">@sub.subName</a></h3>
+            </div>
+        </div>
+
+
+    }
+</div>
