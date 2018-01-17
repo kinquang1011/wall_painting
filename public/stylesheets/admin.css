@@ -1,0 +1,11 @@
+#mybody{
+    background-color: Honeydew;
+    padding-top: 15px;
+}
+
+#mycenter_admin h2 {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 10px solid green;
+}

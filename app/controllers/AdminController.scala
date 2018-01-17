@@ -13,7 +13,11 @@ class AdminController extends Controller {
       Ok(views.html.adminLogin())
     } else {
       val user = request.session.get("nhukom")
-      Ok("Hello")
+      if (user != null) {
+        Ok(views.html.adminPage())
+      } else {
+        Ok(views.html.adminLogin())
+      }
     }
   }
 
@@ -36,8 +40,9 @@ class AdminController extends Controller {
     }
   }
 
-  def showData = Action { implicit request =>
-    Ok(views.html.adminLogin())
+  def add = Action { implicit request =>
+    Ok(views.html.addNewArticle())
 
   }
+
 }
